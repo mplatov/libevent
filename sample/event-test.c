@@ -72,6 +72,13 @@ main (int argc, char **argv)
 	struct event evfifo;
 #ifdef WIN32
 	HANDLE socket;
+	WORD wVersionRequested;
+	WSADATA wsaData;
+	int	err;
+
+	wVersionRequested = MAKEWORD( 2, 2 );
+	err = WSAStartup( wVersionRequested, &wsaData );
+
 	// Open a file. 
 	socket = CreateFile("test.txt",     // open File 
 			GENERIC_READ,                 // open for reading 

@@ -16,6 +16,7 @@
 #include <sys/time.h>
 #else
 #include <windows.h>
+#define __func__ __FILE__ 
 #endif
 #include <signal.h>
 #include <fcntl.h>
@@ -45,6 +46,15 @@ int
 main (int argc, char **argv)
 {
 	struct event signal_int;
+
+#ifdef WIN32
+	WORD wVersionRequested;
+	WSADATA wsaData;
+	int	err;
+
+	wVersionRequested = MAKEWORD( 2, 2 );
+	err = WSAStartup( wVersionRequested, &wsaData );
+#endif
  
 	/* Initalize the event library */
 	event_init();

@@ -45,13 +45,13 @@
 #define _EVENT_HAVE_GETNAMEINFO 1
 
 /* Define to 1 if you have the `gettimeofday' function. */
-#define _EVENT_HAVE_GETTIMEOFDAY 1
+#undef _EVENT_HAVE_GETTIMEOFDAY
 
 /* Define to 1 if you have the `inet_ntop' function. */
 #define _EVENT_HAVE_INET_NTOP 1
 
 /* Define to 1 if you have the <inttypes.h> header file. */
-#define _EVENT_HAVE_INTTYPES_H 1
+#undef _EVENT_HAVE_INTTYPES_H
 
 /* Define to 1 if you have the `kqueue' function. */
 /* #undef _EVENT_HAVE_KQUEUE */
@@ -105,7 +105,7 @@
 #define _EVENT_HAVE_STDARG_H 1
 
 /* Define to 1 if you have the <stdint.h> header file. */
-#define _EVENT_HAVE_STDINT_H 1
+#undef _EVENT_HAVE_STDINT_H 
 
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define _EVENT_HAVE_STDLIB_H 1
@@ -159,7 +159,7 @@
 #define _EVENT_HAVE_SYS_STAT_H 1
 
 /* Define to 1 if you have the <sys/time.h> header file. */
-#define _EVENT_HAVE_SYS_TIME_H 1
+#undef _EVENT_HAVE_SYS_TIME_H 
 
 /* Define to 1 if you have the <sys/types.h> header file. */
 #define _EVENT_HAVE_SYS_TYPES_H 1
@@ -183,10 +183,10 @@
 #define _EVENT_HAVE_UINT16_T 1
 
 /* Define to 1 if the system has the type `uint32_t'. */
-#define _EVENT_HAVE_UINT32_T 1
+#undef _EVENT_HAVE_UINT32_T 
 
 /* Define to 1 if the system has the type `uint64_t'. */
-#define _EVENT_HAVE_UINT64_T 1
+#undef _EVENT_HAVE_UINT64_T 
 
 /* Define to 1 if the system has the type `uint8_t'. */
 #define _EVENT_HAVE_UINT8_T 1

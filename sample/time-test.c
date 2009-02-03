@@ -13,10 +13,17 @@
 #ifndef WIN32
 #include <sys/queue.h>
 #include <unistd.h>
+#else
+#include "windows.h"
+#define __func__ __FILE__ 
 #endif
 #include <time.h>
 #ifdef HAVE_SYS_TIME_H
 #include <sys/time.h>
+#else 
+#ifndef WIN32
+#include <sys/_time.h>
+#endif
 #endif
 #include <fcntl.h>
 #include <stdlib.h>
@@ -50,6 +57,15 @@ main (int argc, char **argv)
 {
 	struct event timeout;
 	struct timeval tv;
+
+#ifdef WIN32
+	WORD wVersionRequested;
+	WSADATA wsaData;
+	int	err;
+
+	wVersionRequested = MAKEWORD( 2, 2 );
+	err = WSAStartup( wVersionRequested, &wsaData );
+#endif
  
 	/* Initalize the event library */
 	event_init();
