@@ -161,6 +161,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="Ws2_32.lib"
 				OutputFile=".\Release/event_test.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

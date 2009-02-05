@@ -1,0 +1,11 @@
+WIN32-Prj/Debug/*
+WIN32-Prj/Release/*
+WIN32-Prj/event_test/Debug/*
+WIN32-Prj/event_test/Release/*
+WIN32-Prj/signal_test/Debug/*
+WIN32-Prj/signal_test/Release/*
+WIN32-Prj/time_test/Debug/*
+WIN32-Prj/time_test/Release/*
+*.ncb
+*.suo
+*.vcproj.*
